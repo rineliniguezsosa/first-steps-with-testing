@@ -8,9 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "vitest":"vitest",
-    "test:iu":"vitest --ui",
-    "caverage":"vitest run --coverage"
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "test:iu":"vitest --ui"
   },
   "dependencies": {
     "react": "^19.2.4",
