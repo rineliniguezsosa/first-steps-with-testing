@@ -9,4 +9,10 @@ describe('Pruebas en el componente MyAweasomeApp',() =>{
         console.log(screen.debug());
 
     });
+    test('Deberia renderizar el nombre Rinel',()=>{
+        const { container } = render(<MyAweasomeApp/>);
+        const heading = container.querySelector('h1')
+        console.log(heading?.innerHTML);
+            
+    });
 });
