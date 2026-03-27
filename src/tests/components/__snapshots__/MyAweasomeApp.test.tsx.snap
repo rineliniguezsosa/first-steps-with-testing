@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Pruebas en el componente MyAweasomeApp > Deberia coincidir con el snapshoot 1`] = `
+<div>
+  <div>
+    <h1
+      data-testid="name"
+    >
+      Rinel
+    </h1>
+    <h2>
+      Iniguez
+    </h2>
+  </div>
+</div>
+`;
