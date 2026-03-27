@@ -1,4 +1,4 @@
-import { describe, test } from "vitest";
+import { describe, expect, test } from "vitest";
 import { render, screen } from '@testing-library/react'
 import { MyAweasomeApp } from '../../components/MyAweasomeApp';
 
@@ -11,8 +11,8 @@ describe('Pruebas en el componente MyAweasomeApp',() =>{
     });
     test('Deberia renderizar el nombre Rinel',()=>{
         const { container } = render(<MyAweasomeApp/>);
-        const heading = container.querySelector('h1')
-        console.log(heading?.innerHTML);
-            
+        screen.debug();
+        const heading = container.querySelector('h1');
+        expect(heading?.innerHTML).toContain('Rinel'); 
     });
 });
