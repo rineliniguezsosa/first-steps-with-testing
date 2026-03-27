@@ -34,4 +34,9 @@ describe('Pruebas en el componente MyAweasomeApp',() =>{
         console.log(heading.innerHTML);
         
     });
+    test('Deberia coincidir con el snapshoot', () => { 
+        const { container } = render(<MyAweasomeApp/>);
+
+        expect(container).toMatchSnapshot()
+    })
 });
