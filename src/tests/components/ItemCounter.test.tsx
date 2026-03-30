@@ -1,5 +1,6 @@
-import { render,screen } from "@testing-library/react";
+import { render,screen,fireEvent } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
+import "@testing-library/jest-dom";
 import { ItemCounter } from "../../components/ItemCounter";
 
 describe('Pruebas en el componente ItemCounter',()=>{
@@ -18,7 +19,20 @@ describe('Pruebas en el componente ItemCounter',()=>{
 
         expect(screen.getByText(name)).toBeDefined();
         expect(screen.getByText(quantity)).toBeDefined();
-        console.log(screen.debug());
+        // console.log(screen.debug());
         
     })
-})
+    test('El botón debe de incrementar en 1',async()=>{
+            render(<ItemCounter name={'Test item'} quantity={5} />);
+            
+            const buttonAdd = screen.getByRole('button', { name: /\+1/ });
+
+            screen.debug();
+
+            fireEvent.click(buttonAdd);
+
+            screen.debug();
+
+            expect(screen.getByText('6')).toBeInTheDocument();
+    })
+});
