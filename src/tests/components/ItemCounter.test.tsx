@@ -22,7 +22,7 @@ describe('Pruebas en el componente ItemCounter',()=>{
         // console.log(screen.debug());
         
     })
-    test('El botón debe de incrementar en 1',async()=>{
+    test('El botón debe de incrementar en 1',()=>{
             render(<ItemCounter name={'Test item'} quantity={5} />);
             
             const buttonAdd = screen.getByRole('button', { name: /\+1/ });
@@ -34,5 +34,18 @@ describe('Pruebas en el componente ItemCounter',()=>{
             screen.debug();
 
             expect(screen.getByText('6')).toBeInTheDocument();
+    })
+    test('El botón debe de decrementar en -1',()=>{
+            render(<ItemCounter name={'Test item'} quantity={5} />);
+            
+            const buttonDecrease = screen.getByRole('button', { name: /-1/ });
+
+            screen.debug();
+
+            fireEvent.click(buttonDecrease);
+
+            screen.debug();
+
+            expect(screen.getByText('4')).toBeInTheDocument();
     })
 });
