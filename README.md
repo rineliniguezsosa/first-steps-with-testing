@@ -24,3 +24,34 @@ Clona el repositorio:
 
 ```bash
 git clone https://github.com/rineliniguezsosa/first-steps-with-testing.git
+```
+
+Accede al proyecto:
+
+```bash
+cd first-steps-with-testing
+```
+
+Instala las dependencias:
+
+```bash
+npm install
+```
+
+## Ejecutar el proyecto
+
+```bash
+npm run dev
+```
+
+Luego abre en tu navegador:
+
+```bash
+http://localhost:5173
+```
+
+## Ejecutar pruebas
+
+```bash
+npm run test
+```
