@@ -1,0 +1,65 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Pruebas en el componente FirstStepApp > Debe de coincidir con el snapshoot 1`] = `
+<div>
+  <div>
+    <h1>
+      Carrito de compras
+    </h1>
+    <section
+      style="flex: 1 1 0%; align-items: center; gap: 10px; margin-top: 10px;"
+    >
+      <span
+        style="width: 150px;"
+      >
+        Nintendo Switch
+      </span>
+      <button>
+        +1
+      </button>
+      <span>
+        10
+      </span>
+      <button>
+        -1
+      </button>
+    </section>
+    <section
+      style="flex: 1 1 0%; align-items: center; gap: 10px; margin-top: 10px;"
+    >
+      <span
+        style="width: 150px;"
+      >
+        Xbox One
+      </span>
+      <button>
+        +1
+      </button>
+      <span>
+        20
+      </span>
+      <button>
+        -1
+      </button>
+    </section>
+    <section
+      style="flex: 1 1 0%; align-items: center; gap: 10px; margin-top: 10px;"
+    >
+      <span
+        style="width: 150px;"
+      >
+        Wii
+      </span>
+      <button>
+        +1
+      </button>
+      <span>
+        20
+      </span>
+      <button>
+        -1
+      </button>
+    </section>
+  </div>
+</div>
+`;
