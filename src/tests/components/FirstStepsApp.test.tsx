@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, test, vi } from "vitest";
+import { afterEach, describe, expect, test, vi } from "vitest";
 import { FirstStepsApp } from "../../components/FirstStepsApp";
 
 vi.mock('../../components/ItemCounter',() => ({
@@ -7,6 +7,9 @@ vi.mock('../../components/ItemCounter',() => ({
 }))
 
 describe('Pruebas en el componente FirstStepApp', () => { 
+    afterEach(()=>{
+        vi.clearAllMocks()
+    })
     test('Debe de coincidir con el snapshoot', () => { 
         const { container } = render(<FirstStepsApp/>)
 
